@@ -294,11 +294,11 @@ function ProductList({ onHomeClick }) {
     setShowCart(false);
   };
 
-  const handleAddToCart = (product) => {
-    dispatch(addItem(product));
+  const handleAddToCart = (plant) => {
+    dispatch(addItem(plant));
     setAddedToCart((prevState) => ({
       ...prevState,
-      [product.name]: true, // Set the product name as key and value as true to indicate it's added to cart
+      [plant.name]: true, // Set the product name as key and value as true to indicate it's added to cart
     }));
   };
 
@@ -357,7 +357,7 @@ function ProductList({ onHomeClick }) {
       </div>
       {!showCart ? (
         <div className="product-grid">
-           {plantsArray.map((category, index) => (
+          {plantsArray.map((category, index) => (
             <div key={index}>
               <h1>
                 <div>{category.category}</div>
@@ -382,10 +382,10 @@ function ProductList({ onHomeClick }) {
                 ))}
               </div>
             </div>
-          ))} 
+          ))}
         </div>
       ) : (
-        {/* <CartItem onContinueShopping={handleContinueShopping} /> */}
+        <CartItem onContinueShopping={handleContinueShopping} />
       )}
     </div>
   );
