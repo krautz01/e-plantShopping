@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import "./ProductList.css";
 import CartItem from "./CartItem";
 import { addItem } from "./CartSlice";
@@ -357,7 +357,7 @@ function ProductList({ onHomeClick }) {
       </div>
       {!showCart ? (
         <div className="product-grid">
-          {plantsArray.map((category, index) => (
+           {plantsArray.map((category, index) => (
             <div key={index}>
               <h1>
                 <div>{category.category}</div>
@@ -376,16 +376,16 @@ function ProductList({ onHomeClick }) {
                       className="product-button"
                       onClick={() => handleAddToCart(plant)}
                     >
-                      Add to Cart
+                      Add to Carthhhhhhh
                     </button>
                   </div>
                 ))}
               </div>
             </div>
-          ))}
+          ))} 
         </div>
       ) : (
-        <CartItem onContinueShopping={handleContinueShopping} />
+        {/* <CartItem onContinueShopping={handleContinueShopping} /> */}
       )}
     </div>
   );
